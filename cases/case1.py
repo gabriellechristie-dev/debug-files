@@ -2,10 +2,15 @@ import time
 
 #narrativa inicial
 def run_case1(): 
+    print("Iniciando investigação do caso 1...")
+    time.sleep(3)
+
     print("O banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...")
     time.sleep(3)
+
     print("Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...")
     time.sleep(3)
+    
     print("Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...")
     time.sleep(4)
 

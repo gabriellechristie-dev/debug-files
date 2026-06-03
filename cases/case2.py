@@ -4,10 +4,13 @@ import time
 def run_case2():
     print("Iniciando investigação do caso 2...")
     time.sleep(3)
+
     print("Uma empresa relatou que o sistema de processamento de pedidos ficou preso executando indefinidamente...")
     time.sleep(3)
+
     print("Os pedidos deveriam ser processados e o programa encerrado após concluir o trabalho...")
     time.sleep(3)
+    
     print("No entanto, o sistema continua executando sem parar, nunca chegando a mostrar a mensagem de processamento final de todos os pedidos...")
     time.sleep(4)
 
