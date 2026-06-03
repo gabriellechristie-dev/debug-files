@@ -36,5 +36,4 @@ Treinar:
 * Decomposição de problemas
 * Organização de sistemas CLI
 * Modularização
-* Manipulação de JSON
 * Pensamento computacional
