@@ -3,14 +3,16 @@ from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_ou
 
 #narrativa inicial
 def run_case1(): 
-    titulo_caso = "Caso 1 - Sistema Bancário"
+    
+    caso = """ 
+📂 CASO 1"""
+    titulo_caso = "Sistema Bancário"
 
-    narrativa = """
-    Um banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...
-    Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...
-    Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
+    narrativa = """Um banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...
+Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...
+Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
                 """
-    mostrar_titulo(titulo_caso)
+    mostrar_titulo(titulo_caso, caso)
     time.sleep(1.5)
     mostrar_narrativa(narrativa)
     time.sleep(1.5)
@@ -39,9 +41,8 @@ def run_case1():
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ 
-    1. Analisar variável saldo  
-    2. Testar depósito
+    menu_investigacao = """ 1. Analisar variável saldo  
+2. Testar depósito
     """ 
 
 #diagnóstico
@@ -59,9 +60,8 @@ def run_case1():
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
 #resultado final
-    menu_decisao_final = """
-    1. A variável saldo está sendo reinicializada dentro da função
-    2. O sistema está exibindo o resultado incorretamente
+    menu_decisao_final = """1. A variável saldo está sendo reinicializada dentro da função
+2. O sistema está exibindo o resultado incorretamente
 
     """
 

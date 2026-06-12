@@ -1,6 +1,9 @@
+from visual import mostrar_tela_inicial
+
 def menu():
-    print("---Seja bem-vindo ao Debug Cases!---")
-    print("1. Jogar")
-    print("2. Sair")    
+ 
+    mostrar_tela_inicial()
+
     choice = input("Escolha uma opção: ")
+    
     return choice
