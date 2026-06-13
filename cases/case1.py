@@ -3,12 +3,12 @@ from visual import mostrar_titulo, mostrar_narrativa, mostrar_codigo, mostrar_ou
 
 #narrativa inicial
 def run_case1(): 
-    
-    caso = """ 
-📂 CASO 1"""
+    print("")
+    caso = """📂 CASO 1"""
     titulo_caso = "Sistema Bancário"
 
-    narrativa = """Um banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...
+    narrativa = """
+Um banco recebeu diversos relatos de clientes afirmando que seus saldos desapareciam após operações de depósito e saque...
 Os valores pareciam ser redefinidos de forma inesperada, comprometendo a integridade do sistema financeiro...
 Sua missão é investigar o código e identificar o bug responsável pelo desaparecimento dos saldos...
                 """
@@ -41,7 +41,8 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     time.sleep(2)
 
 #investigações
-    menu_investigacao = """ 1. Analisar variável saldo  
+    menu_investigacao = """
+1. Analisar variável saldo  
 2. Testar depósito
     """ 
 
