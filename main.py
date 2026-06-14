@@ -5,15 +5,14 @@ from cases import case1, case2, case3, case4, case5
 while True:
     choice = menu.menu()
     
-    if choice == "1":
+    if choice == 1:
 
         resultado = case1.run_case1()
         while resultado == False:
             print("Ops! Parece que a solução não está correta. Tente novamente.")
             time.sleep(2)
-            print("Reiniciando investigação do caso 1...")
+            print("🔄 Reiniciando investigação...")
             resultado = case1.run_case1()
-        print("Parabéns! Você resolveu o caso com sucesso!")
         time.sleep(2)
 
       
@@ -63,7 +62,7 @@ while True:
         print("===================================")
         time.sleep(2)
 
-    elif choice == "2":
+    elif choice == 2:
         print("Saindo do jogo...") 
         break 
     else:

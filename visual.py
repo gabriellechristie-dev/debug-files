@@ -3,6 +3,7 @@ from rich.panel import Panel
 from rich import box
 from rich.rule import Rule
 from rich.align import Align
+from rich.syntax import Syntax 
 
 console = Console()
 
@@ -14,8 +15,8 @@ def mostrar_titulo(titulo_caso,caso):
 
 
 def mostrar_narrativa(narrativa):
-    print("")
-    print("")
+    console.print("")
+    console.print("")
     rule = Rule( title="📋 RELATÓRIO DO CASO", style = "cyan")
     console.print(rule)
     console.print(narrativa)
@@ -23,16 +24,17 @@ def mostrar_narrativa(narrativa):
 
 
 def mostrar_codigo(codigo_bugado):
-    print("")
-    print("")
+    console.print("")
+    console.print("")
     rule =  Rule(title="💻 CÓDIGO SUSPEITO" , style = "blue")
+    syntax = Syntax(codigo_bugado, "python")
     console.print(rule)
-    console.print(codigo_bugado)
+    console.print(syntax)
     
 
 def mostrar_output(output_observado):
-    print("")
-    print("")
+    console.print("")
+    console.print("")
     rule = Rule(title="🖥 COMPORTAMENTO OBSERVADO", style = "green")
     console.print(rule)
     console.print(output_observado)
@@ -40,16 +42,16 @@ def mostrar_output(output_observado):
 
     
 def mostrar_pistas(menu_investigacao):
-    print("")
-    print("")
+    console.print("")
+    console.print("")
     rule = Rule(title="🔍 PISTAS DISPONÍVEIS", style = "yellow")
     console.print(rule)
     console.print(menu_investigacao)
 
 
 def mostrar_diagnostico(menu_decisao_final):
-    print("")
-    print("")
+    console.print("")
+    console.print("")
     rule = Rule(title="⚠ DIAGNÓSTICO FINAL" , style = "red")
     console.print(rule)
     console.print(menu_decisao_final)
@@ -63,8 +65,8 @@ Hoje a sua missão é analisar sistemas defeituosos,
 coletar pistas e descobrir a causa dos bugs!""" 
 
     opcoes = """
-1. Iniciar Investigação
-2. Sair """
+1.▶ Iniciar Investigação
+2.✖ Sair """
     
     panel = Panel(Align.center(cabecalho), box.DOUBLE)
     console.print(panel)

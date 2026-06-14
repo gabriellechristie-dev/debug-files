@@ -47,19 +47,30 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     """ 
 
 #diagnóstico
-    investigacao = 0
-    while investigacao < 2:
-        mostrar_pistas(menu_investigacao)
-        escolha = input("Escolha uma opção para investigar: ")  
-        if escolha == "1":
-            print("O valor armazenado no saldo parece não permanecer após a operação.")
-            investigacao += 1
-        elif escolha == "2":
-            print("O valor final corresponde apenas ao último depósito realizado.")
-            investigacao += 1
+    pista_vista1 = False
+    pista_vista2 = False
+    mostrar_pistas(menu_investigacao)
+    while pista_vista1 == False or pista_vista2 == False:
+        
+        escolha = int(input("Escolha uma opção para investigar: "))
+        print("")
+        if escolha == 1:
+            if pista_vista1 == True:
+                print("⚠ Você já investigou essa pista.")
+            else:
+                print("💡 PISTA ENCONTRADA \n\n O valor armazenado no saldo parece não permanecer após a operação.")
+                print("")
+                pista_vista1 = True
+        
+        elif escolha == 2:
+            if pista_vista2 == True:
+                print("⚠ Você já investigou essa pista.")
+            else:
+                print("💡 PISTA ENCONTRADA \n\n O valor final corresponde apenas ao último depósito realizado.")
+                pista_vista2 = True
         else:
-            print("Opção inválida. Por favor, escolha uma opção válida.")
-
+            print("Por favor, escolha a opção 1 ou 2!")
+            
 #resultado final
     menu_decisao_final = """1. A variável saldo está sendo reinicializada dentro da função
 2. O sistema está exibindo o resultado incorretamente
@@ -69,12 +80,12 @@ Sua missão é investigar o código e identificar o bug responsável pelo desapa
     mostrar_diagnostico(menu_decisao_final)
 
     
-    decisao_final = input("Qual é a causa do bug? ")
-    if decisao_final == "1":
-        print("Correto! A variável saldo está sendo reinicializada dentro da função, o que faz com que o valor anterior seja perdido.")
+    decisao_final = int(input("Qual é a causa do bug? "))
+    if decisao_final == 1:
+        print("━━━━━━━━━━ ✅ DIAGNÓSTICO CONFIRMADO ━━━━━━━━━━ \n Causa do bug: \n A variável saldo está sendo reinicializada dentro da função,substituindo o valor anterior pelo valor do depósito. \n 🏆 Caso encerrado com sucesso.")
         return True
-    elif decisao_final == "2":
-        print("Incorreto. O sistema está exibindo o resultado corretamente, mas o problema está na forma como a variável saldo é manipulada dentro da função.")
+    elif decisao_final == 2:
+        print("━━━━━━━━━━ ❌ DIAGNÓSTICO INCORRETO ━━━━━━━━━━\n A hipótese escolhida não explica o comportamento observado.")
         return False
     else:   
         print("Opção inválida. Por favor, escolha uma opção válida.")
